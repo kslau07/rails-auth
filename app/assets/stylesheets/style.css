@@ -1,0 +1,11 @@
+:root {
+	font-family: Helvetica;
+}
+
+body {
+	padding: 5rem;
+}
+
+#user_header {
+	text-align: right;
+}
