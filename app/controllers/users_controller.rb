@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       # After creating/saving, set session id immediately
       # (log in user immediately after they sign up)
       session[:user_id] = @user.id
-      
+
       redirect_to root_url, notice: 'Thank you for signing up!'
     else
       render 'new', status: :unprocessable_entity
@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   private
 
-  # do we need strong params?
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
